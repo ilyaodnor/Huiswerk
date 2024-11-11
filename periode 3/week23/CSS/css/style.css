@@ -1,0 +1,30 @@
+body {
+    background-color: #f2f2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#puzzle {
+    width: 600px;  /* Ширина пазла */
+    height: 400px; /* Высота пазла */
+    margin: 40px;
+    border: 4px solid black;
+    
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 столбцов */
+    grid-template-rows: repeat(5, 1fr);     /* 5 строк */
+    gap: 0; /* Убираем все промежутки между картинками */
+}
+
+#puzzle img {
+    width: 100%;   /* Каждое изображение займет всю ячейку */
+    height: 100%;
+    object-fit: cover; /* Обеспечивает покрытие ячейки */
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: block;
+}
