@@ -1,3 +1,4 @@
+from random import *
 lijst = [5,12,19,27,3]
 lijst.append(25)
 print(lijst)
@@ -11,4 +12,7 @@ print(f'Het totaal van de lijst is {sum(lijst)}')
 lijst.clear()
 print(lijst)
 for i in range(0,5): lijst.insert(i,i+1)
+print(lijst)
+lijst.append(randint(1,10))
+lijst.append(randint(50,100))
 print(lijst)
