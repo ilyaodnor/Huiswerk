@@ -18,3 +18,5 @@ lijst.append(randint(1,10))
 lijst.append(randint(50,100))
 print(lijst)
 print(f'Er nu zitten {len(lijst)} elementen in de lijst en het totaal van de lijst is {sum(lijst)}')
+lijst[0], lijst[-1] = lijst[-1], lijst[0]
+print(lijst)
