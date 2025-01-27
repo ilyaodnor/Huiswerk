@@ -5,5 +5,6 @@ def fibonacci_getallen():
     
     for i in range(9):
         fibonacci_lijst.append(fibonacci_lijst[i+1]+fibonacci_lijst[i])
-    print(fibonacci_lijst)
+    
+    print(', '.join(map(str,fibonacci_lijst)))
 fibonacci_getallen()
