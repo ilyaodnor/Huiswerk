@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Random Dice</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+    <img id="dice-image" src="dice_face_1.png" alt="Dice Image">  
+
+    <script>  
+        var score =  0
+        const images = [  
+            'dice_face_1.png',  
+            'dice_face_2.png',  
+            'dice_face_3.png',  
+            'dice_face_4.png',  
+            'dice_face_5.png',  
+            'dice_face_6.png'  
+        ];  
+
+        const img = document.getElementById('dice-image');  
+        let rolling = false; 
+
+        async function rollDice() {  
+            rolling = true; 
+            while (rolling) {  
+                const randomIndex = Math.floor(Math.random() * images.length);  
+                img.setAttribute('src', images[randomIndex]);  
+                await new Promise(resolve => setTimeout(resolve, 100));  
+            }  
+        }  
+
+        img.addEventListener('click', function() {  
+            rolling = !rolling; 
+            if (rolling) {  
+                rollDice(); 
+            } else {  
+                console.log("Rolling stopped"); 
+            }  
+        });  
+
+        rollDice(); // Start rolling initially  
+    </script>  
+</body>  
+</html>
